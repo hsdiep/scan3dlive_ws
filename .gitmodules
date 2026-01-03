@@ -1,0 +1,7 @@
+[submodule "livox_ros2_driver"]
+	path = src/scan3dlive/src/livox_ros2_driver
+	url = https://github.com/Livox-SDK/livox_ros2_driver.git
+[submodule "Livox-SDK"]
+	path = installation_files/Livox-SDK
+	url = https://github.com/Livox-SDK/Livox-SDK.git
+	branch = fix_ros2_humble
