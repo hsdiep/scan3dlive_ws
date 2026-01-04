@@ -45,6 +45,7 @@ RUN set -ex; \
     cd /tmp/scan3dlive_install_files/build; \
     mkdir Livox-SDK; \
     cd Livox-SDK; \
-    cmake /tmp/scan3dlive_install_files/source/Livox-SDK; \
+    cmake /tmp/scan3dlive_install_files/source/Livox-SDK -DCMAKE_POSITION_INDEPENDENT_CODE=ON; \
     make; \
     sudo make install
+
