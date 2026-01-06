@@ -21,7 +21,7 @@ class TestPublisher : public rclcpp::Node
     {
       publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("livox/lidar", 10);
       timer_ = this->create_wall_timer(
-      500ms, std::bind(&TestPublisher::timer_callback, this));
+      100ms, std::bind(&TestPublisher::timer_callback, this));
     }
 
   private:
@@ -29,7 +29,7 @@ class TestPublisher : public rclcpp::Node
     {
       auto message = sensor_msgs::msg::PointCloud2();
       // message.data = "Hello, world! " + std::to_string(count_++);
-      RCLCPP_INFO(this->get_logger(), "Publishing PointCloud2");
+      // RCLCPP_INFO(this->get_logger(), "Publishing PointCloud2");
       publisher_->publish(message);
     }
     rclcpp::TimerBase::SharedPtr timer_;

@@ -36,6 +36,10 @@ RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 ################################
 ## ADD ANY CUSTOM SETUP BELOW ##
 ################################
+
+# Install Nano to use with Git
+RUN sudo apt-get install -y nano
+
 RUN mkdir -p /tmp/scan3dlive_install_files/source
 RUN mkdir -p /tmp/scan3dlive_install_files/build
 COPY ./installation_files /tmp/scan3dlive_install_files/source
